@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agrgar producto</title>
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/form.css">
+</head>
+
+<body>
+    <nav class="flex">
+
+        <div class="logo">
+
+            <h2>Muebles Mandujano</h2>
+        </div>
+
+        <div class="menu">
+            <ul>
+                <li><a href="/">Inicio</a></li>
+                <li><a href="RegistroProducto.html">Productos</a></li>
+                <li><a href="#">Contacto</a></li>
+                <li><a href="Pedido.html">carrito</a></li>
+            </ul>
+        </div>
+
+        <!-- Creando reloj -->
+        <div id="clockdate">
+            <div class="contenedor-reloj">
+                <div id="reloj"></div>
+                <div id="fecha"></div>
+            </div>
+        </div>
+
+    </nav>
+    <div class="contenedor">
+        <h1>Formulario de registro de productos</h1>
+        <form>
+            <label for="producto">  Producto</label>
+            <input type="text" name="producto" id="producto" placeholder="nombre del producto" required max="5">
+            <label for="producto">Departamento:</label>
+            <input type="text" name="departamento" id="departamento" placeholder="Ejemplo:linea blanca" required>
+            <label for="producto">Precio</label>
+            <input type="text" name="precio" id="precio" placeholder="1200" required pattern="[0-9]*">
+            <input type="button" value="Enviar datos" onclick="validar()">
+        </form>
+
+        <table id="lista">
+            <tr>
+                <th>#</th>
+                <th>Producto</th>
+                <th>Departamento</th>
+                <th>Precio</th>
+
+            </tr>
+
+
+
+        </table>
+
+        <footer>
+            <center>
+                <p>&copy;Gerardo Mandujano </p>
+            </center>
+        </footer>
+        <script src="js/app.js"></script>
+        <script src="js/registroproductos.js"></script>
+    </div>
+</body>
+
+</html>

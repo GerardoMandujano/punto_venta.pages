@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/form.css">
+
+    <style>
+        #lista-pedido {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="flex">
+
+        <div class="logo">
+
+            <h2>Muebles Mandujano</h2>
+        </div>
+
+        <div class="menu">
+            <ul>
+                <li><a href="/">Inicio</a></li>
+                <li><a href="RegistroProducto.html">Productos</a></li>
+                <li><a href="#">Contacto</a></li>
+                <li><a href="Pedido.html">carrito</a></li>
+            </ul>
+        </div>
+
+        <!-- Creando reloj -->
+        <div id="clockdate">
+            <div class="contenedor-reloj">
+                <div id="reloj"></div>
+                <div id="fecha"></div>
+            </div>
+        </div>
+
+    </nav>
+    <div class="contenedor">
+        <h1>Pedido</h1>
+        <form class="form-pedido ">
+            <label for="producto"> Producto</label>
+            <input type="text" name="producto" id="nombre" placeholder="Nombre" required max="5">
+            <label for="producto">Precio:</label>
+            <input type="text" name="precio" id="precio" placeholder="1200" required pattern="[0-9]*">
+            <label for="producto">Cantidad:</label>
+            <input type="text" name="cantidad" id="cantidad" placeholder="1200" required pattern="[0-9]*">
+            <input type="button" value="Añadir" id="aniadir" onclick="Add()">
+            <br>
+            <center>
+                <input type="button" value="Enviar datos"></center>
+        </form>
+    </div>
+    <table id="lista-pedido">
+        <tr>
+            <th>#</th>
+            <th>Producto</th>
+            <th>precio</th>
+            <th>cantidad</th>
+            <th>Subtotal</th>
+
+        </tr>
+
+
+
+    </table>
+    <center>
+        <div id="divtotal"></div>
+    </center>
+    <footer>
+        <center>
+            <p>&copy;Gerardo Mandujano </p>
+        </center>
+    </footer>
+    <script src="js/pedido.js "></script>
+</body>
+
+</html>
